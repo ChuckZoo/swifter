@@ -128,6 +128,7 @@ public enum HttpResponse {
         var headers = ["Server": "Swifter \(HttpServer.VERSION)"]
 	headers["Access-Control-Allow-Headers"] = "*"
 	headers["Access-Control-Allow-Origin"] = "*"
+	headers["Access-Control-Allow-Methods"] = "GET, HEAD, OPTIONS"
 	    
         switch self {
         case .switchProtocols(let switchHeaders, _):
