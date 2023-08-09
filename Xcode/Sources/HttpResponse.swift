@@ -126,6 +126,8 @@ public enum HttpResponse {
 
     public func headers() -> [String: String] {
         var headers = ["Server": "Swifter \(HttpServer.VERSION)"]
+	headers["Access-Control-Allow-Origin"] = "*"
+	    
         switch self {
         case .switchProtocols(let switchHeaders, _):
             for (key, value) in switchHeaders {
