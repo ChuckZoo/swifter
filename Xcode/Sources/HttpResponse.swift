@@ -126,6 +126,7 @@ public enum HttpResponse {
 
     public func headers() -> [String: String] {
         var headers = ["Server": "Swifter \(HttpServer.VERSION)"]
+	headers["Access-Control-Allow-Headers"] = "*"
 	headers["Access-Control-Allow-Origin"] = "*"
 	    
         switch self {
