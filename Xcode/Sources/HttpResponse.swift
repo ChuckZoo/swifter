@@ -129,6 +129,7 @@ public enum HttpResponse {
 	headers["Access-Control-Allow-Headers"] = "*"
 	headers["Access-Control-Allow-Origin"] = "*"
 	headers["Access-Control-Allow-Methods"] = "GET, HEAD, OPTIONS"
+	headers["Cross-Origin-Resource-Policy"] = "cross-origin"
 	    
         switch self {
         case .switchProtocols(let switchHeaders, _):
